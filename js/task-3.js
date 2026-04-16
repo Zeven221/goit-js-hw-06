@@ -6,11 +6,16 @@ class StringBuilder {
   getValue() {
     return this.#value.join("");
   }
-  padStart(str) {}
+  padStart(str) {
+    this.#value.unshift(str)
+  }
   padEnd(str) {
     this.#value.push(str)
   }
-  padBoth(str) {}
+  padBoth(str) {
+    this.#value.unshift(str)
+    this.#value.push(str)
+  }
 }
 
 const builder = new StringBuilder('.');
